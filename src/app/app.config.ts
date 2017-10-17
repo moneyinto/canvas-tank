@@ -1,12 +1,12 @@
-import { Home } from '../pages/home/home';
+import { Tank } from '../pages/tank/tank';
 
 export const config = {
     ROUTES: [
-        { path: '', component: Home },
-        { path: 'home', component: Home }
+        { path: '', component: Tank },
+        { path: 'tank', component: Tank }
     ],
 
     DECLARATIONS: [
-        Home
+        Tank
     ]
 }
