@@ -4,6 +4,19 @@ export class Config {
 
     public stageCtx;
 
+    public POS = {};
+
+    /**************按键*****************/
+    public KEY_UP = 38;
+	public KEY_DOWN = 40;
+	public KEY_RIGHT = 39;
+    public KEY_LEFT = 37;
+    public KEY_ENTER = 13;
+
+    /**************图片资源*****************/
+    public MENU_IMAGE = new Image();
+    public RESOURCE_IMAGE = new Image();
+
     /**************声音资源*****************/
     public START_AUDIO = new Audio('assets/audio/start.mp3');
     public BULLET_DESTROY_AUDIO = new Audio('assets/audio/bulletCrack.mp3');
@@ -44,4 +57,27 @@ export class Config {
     /**************爆炸类型****************/
     public CRACK_TYPE_TANK = 'tank';
     public CRACK_TYPE_BULLET = 'bullet';
+
+    constructor() {
+        this.MENU_IMAGE.src = 'assets/img/menu.gif';
+        this.RESOURCE_IMAGE.src = 'assets/img/tankAll.gif';
+
+        this.POS['selectTank'] = [128,96];
+        this.POS['stageLevel'] = [396,96];
+        this.POS['num'] = [256,96];
+        this.POS['map'] = [0,96];
+        this.POS['home'] = [256,0];
+        this.POS['score'] = [0,112];
+        this.POS['player'] = [0,0];
+        this.POS['protected'] = [160,96];
+        this.POS['enemyBefore'] = [256,32];
+        this.POS['enemy1'] = [0,32];
+        this.POS['enemy2'] = [128,32];
+        this.POS['enemy3'] = [0,64];
+        this.POS['bullet'] = [80,96];
+        this.POS['tankBomb'] = [0,160];
+        this.POS['bulletBomb'] = [320,0];
+        this.POS['over'] = [384,64];
+        this.POS['prop'] = [256,110];
+    }
 }
